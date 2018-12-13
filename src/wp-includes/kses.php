@@ -589,7 +589,7 @@ function wp_kses_one_attr( $string, $element ) {
 		$value = '';
 		$vless = 'y';
 	}
-	
+
 	// Sanitize attribute by name.
 	wp_kses_attr_check( $name, $value, $string, $vless, $element, $allowed_html );
 
@@ -744,7 +744,7 @@ function wp_kses_split( $string, $allowed_html, $allowed_protocols ) {
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
  *
- * @since 5.0.1
+ * @since WP-5.0.1
  *
  * @return array HTML attributes that must include a URL.
  */
@@ -775,7 +775,7 @@ function wp_kses_uri_attributes() {
 	 * Use this filter to add any `data-` attributes that are required to be
 	 * validated as a URL.
 	 *
-	 * @since 5.0.1
+	 * @since WP-5.0.1
 	 *
 	 * @param array $uri_attributes HTML attributes requiring validation as a URL.
 	 */

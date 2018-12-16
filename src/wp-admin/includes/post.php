@@ -175,7 +175,7 @@ function _wp_translate_postdata( $update = false, $post_data = null ) {
 }
 
 /**
- * Returns only allowed post data fields
+ * Applies a blacklist to post data fields used in editing functions.
  *
  * @since WP-4.9.9
  *

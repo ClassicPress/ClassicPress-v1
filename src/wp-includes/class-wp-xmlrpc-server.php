@@ -1,4 +1,7 @@
 <?php
+//~ BEGIN EXCISION: wp-content/plugins/cpcore-xmlrpc/class-wp-xmlrpc-server.php
+//~ MORE INFO: https://link.classicpress.net/docs/core-plugins
+
 /**
  * XML-RPC protocol support for ClassicPress
  *
@@ -6597,3 +6600,5 @@ class wp_xmlrpc_server extends IXR_Server {
 		return apply_filters( 'xmlrpc_pingback_error', new IXR_Error( $code, $message ) );
 	}
 }
+
+//~ END EXCISION: wp-content/plugins/cpcore-xmlrpc/class-wp-xmlrpc-server.php

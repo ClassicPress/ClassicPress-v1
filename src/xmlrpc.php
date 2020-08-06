@@ -28,6 +28,9 @@ if ( isset($HTTP_RAW_POST_DATA) )
 /** Include the bootstrap for setting up ClassicPress environment */
 include( dirname( __FILE__ ) . '/wp-load.php' );
 
+//~ BEGIN EXCISION: wp-content/plugins/cpcore-xmlrpc/xmlrpc.php
+//~ MORE INFO: https://link.classicpress.net/docs/core-plugins
+
 if ( isset( $_GET['rsd'] ) ) { // http://cyber.law.harvard.edu/blogs/gems/tech/rsd.html
 header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 ?>
@@ -99,3 +102,5 @@ function logIO( $io, $msg ) {
 	if ( ! empty( $GLOBALS['xmlrpc_logging'] ) )
 		error_log( $io . ' - ' . $msg );
 }
+
+//~ END EXCISION: wp-content/plugins/cpcore-xmlrpc/xmlrpc.php

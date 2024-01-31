@@ -557,15 +557,13 @@ function populate_options() {
 			$autoload = 'yes';
 		}
 
-		if ( is_array( $value ) ) {
-			$value = serialize( $value );
-		}
-
 		if ( ! empty( $insert ) ) {
 			$insert .= ', ';
 		}
 
-		$insert .= $wpdb->prepare( '(%s, %s, %s)', $option, $value, $autoload );
+		$value = maybe_serialize( sanitize_option( $option, $value ) );
+
+		$insert .= $wpdb->prepare( "(%s, %s, %s)", $option, $value, $autoload );
 	}
 
 	if ( ! empty( $insert ) ) {

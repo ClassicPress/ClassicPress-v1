@@ -68,9 +68,6 @@ class File_Upload_Upgrader {
 				wp_die( $file['error'] );
 			}
 
-<<<<<<< HEAD
-			$this->filename = $_FILES[ $form ]['name'];
-=======
 			if ( 'pluginzip' === $form || 'themezip' === $form ) {
 				$archive_is_valid = false;
 
@@ -96,7 +93,6 @@ class File_Upload_Upgrader {
 			}
 
 			$this->filename = $_FILES[$form]['name'];
->>>>>>> 8c25ac7768 (Grouped Backports to the 4.9 branch.)
 			$this->package  = $file['file'];
 
 			// Construct the object array

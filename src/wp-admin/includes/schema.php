@@ -557,12 +557,21 @@ function populate_options() {
 			$autoload = 'yes';
 		}
 
+<<<<<<< HEAD
 		if ( is_array( $value ) ) {
 			$value = serialize( $value );
 		}
 
 		if ( ! empty( $insert ) ) {
 			$insert .= ', ';
+=======
+		if ( !empty($insert) )
+			$insert .= ', ';
+
+		$value = maybe_serialize( sanitize_option( $option, $value ) );
+
+		$insert .= $wpdb->prepare( "(%s, %s, %s)", $option, $value, $autoload );
+>>>>>>> 8c25ac7768 (Grouped Backports to the 4.9 branch.)
 		}
 
 		$insert .= $wpdb->prepare( '(%s, %s, %s)', $option, $value, $autoload );

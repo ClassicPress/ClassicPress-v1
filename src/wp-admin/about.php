@@ -164,7 +164,7 @@ require ABSPATH . 'wp-admin/admin-header.php';
 				printf(
 					/* translators: %s: HelpHub URL */
 					__( 'For more information, see <a href="%s">the blog post</a>.' ),
-					esc_url( __( 'https://wordpress.org/news/2024/01/wordpress-6-4-3-maintenance-and-security-release/' ) ),
+					esc_url( __( 'https://wordpress.org/news/2024/01/wordpress-6-4-3-maintenance-and-security-release/' ) )
 				);
 				?>
 			</p>

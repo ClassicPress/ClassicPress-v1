@@ -157,6 +157,22 @@ require ABSPATH . 'wp-admin/admin-header.php';
 				printf(
 					/* translators: %s: WordPress version number */
 					__( '<strong>Version %s</strong> addressed some security issues.' ),
+					'4.9.25'
+				);
+				?>
+				<?php
+				printf(
+					/* translators: %s: HelpHub URL */
+					__( 'For more information, see <a href="%s">the blog post</a>.' ),
+					esc_url( __( 'https://wordpress.org/news/2024/01/wordpress-6-4-3-maintenance-and-security-release/' ) ),
+				);
+				?>
+			</p>
+			<p>
+				<?php
+				printf(
+					/* translators: %s: WordPress version number */
+					__( '<strong>Version %s</strong> addressed some security issues.' ),
 					'4.9.24'
 				);
 				?>

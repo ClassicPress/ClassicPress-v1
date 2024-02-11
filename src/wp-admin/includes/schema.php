@@ -563,7 +563,7 @@ function populate_options() {
 
 		$value = maybe_serialize( sanitize_option( $option, $value ) );
 
-		$insert .= $wpdb->prepare( "(%s, %s, %s)", $option, $value, $autoload );
+		$insert .= $wpdb->prepare( '(%s, %s, %s)', $option, $value, $autoload );
 	}
 
 	if ( ! empty( $insert ) ) {

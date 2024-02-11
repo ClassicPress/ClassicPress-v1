@@ -163,7 +163,7 @@ if ( isset( $_GET['action'] ) ) {
 			wp_die( __( 'Only .zip archives may be uploaded.' ) );
 		}
 
-		$file_upload = new File_Upload_Upgrader('pluginzip', 'package');
+		$file_upload = new File_Upload_Upgrader( 'pluginzip', 'package' );
 
 		$title        = __( 'Upload Plugin' );
 		$parent_file  = 'plugins.php';
@@ -290,7 +290,7 @@ if ( isset( $_GET['action'] ) ) {
 			wp_die( __( 'Only .zip archives may be uploaded.' ) );
 		}
 
-		$file_upload = new File_Upload_Upgrader('themezip', 'package');
+		$file_upload = new File_Upload_Upgrader( 'themezip', 'package' );
 
 		$title        = __( 'Upload Theme' );
 		$parent_file  = 'themes.php';

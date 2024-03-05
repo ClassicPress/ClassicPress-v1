@@ -1473,11 +1473,7 @@ function cp_dashboard_upgrade() {
 
 	$core_updates = get_core_updates( array( 'dismissed' => true ) );
 
-	if ( ! empty( $core_updates ) && version_compare( $core_updates[0]->current, '2.0.0' ) >= 0 ) {
-		echo '<p>' . sprintf( __( 'Version 2.0.0 has now been released. <a href="%s">Upgrade</a> as soon as you are ready and read more about the release on our <a href="%s">forum</a>.' ), esc_url( admin_url( 'update-core.php' ) ), esc_url( 'https://forums.classicpress.net/c/announcements/release-notes/48' ) ) . '</p>';
-	} else {
-		echo '<p>' . sprintf( __( 'You can continue to use ClassicPress %s at this time. You will be notified when a new version is available that supports future versions of PHP. <a href="%s">Learn more</a> about testing version 2.0.0.' ), $display_version, esc_url( 'https://www.classicpress.net/help-test-classicpress-v2/' ) ) . '</p>';
-	}
+	echo '<p>' . sprintf( __( 'Version 2.0.0 has now been released. <a href="%s">Upgrade</a> as soon as you are ready and read more about the release on our <a href="%s">forum</a>.' ), esc_url( 'https://www.classicpress.net/announcing-bella-version-2-of-classicpress/' ), esc_url( 'https://forums.classicpress.net/c/announcements/release-notes/48' ) ) . '</p>';
 
 	echo '<p>' . __( '<strong>Deprecation notice:</strong> Version 1.6 is the last version to support PHP 5.6 - 7.3. The minimum required version for 2.0.0 will be PHP 7.4.' ) . '</p>';
 	echo '<p>' . __( '<strong>Deprecation notice:</strong> Version 1.7 is the last version to support XHTML. HTML5 will be the default doctype. Make sure your theme does not use XHTML. Themes will no longer need to declare HTML5 support using <code>add_theme_support( \'html5\', array() )</code> function.' ) . '</p>';

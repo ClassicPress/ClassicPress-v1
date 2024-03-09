@@ -92,7 +92,7 @@ class File_Upload_Upgrader {
 				}
 			}
 
-			$this->filename = $_FILES[$form]['name'];
+			$this->filename = $_FILES[ $form ]['name'];
 			$this->package  = $file['file'];
 
 			// Construct the object array
